@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Desenvolvedor Front-End</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <img src="https://via.placeholder.com/120" alt="Foto de Perfil" class="perfil">
+    <h1>Olá, eu sou o [Seu Nome]</h1>
+    <p>Desenvolvedor Front-End🚀</p>
+
+    <a href="https://linkedin.com" target="_blank" class="link">
+        <i class="fab fa-linkedin"></i> Meu LinkedIn
+    </a>
+    <a href="https://github.com" target="_blank" class="link">
+        <i class="fab fa-github"></i> Meu GitHub
+    </a>
+    <a href="mailto:seuemail@teste.com" class="link">
+        <i class="fas fa-envelope"></i> Fale Comigo
+    </a>
+
+    <button class="btn-share" onclick="compartilhar()">
+        <i class="fas fa-share-alt"></i> Compartilhar Página
+    </button>
+
+    <script>
+        function compartilhar() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Meus Links',
+                    url: window.location.href
+                });
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert("Link copiado!");
+            }
+        }
+    </script>
+</body>
+</html>
