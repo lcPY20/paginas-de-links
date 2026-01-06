@@ -26,19 +26,8 @@
         <i class="fas fa-share-alt"></i> Compartilhar Página
     </button>
 
-    <script>
-        function compartilhar() {
-            if (navigator.share) {
-                navigator.share({
-                    title: 'Meus Links',
-                    url: window.location.href
-                });
-            } else {
-                navigator.clipboard.writeText(window.location.href);
-                alert("Link copiado!");
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
+
